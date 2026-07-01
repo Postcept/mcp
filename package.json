@@ -1,0 +1,52 @@
+{
+  "name": "@postcept/mcp",
+  "version": "0.1.1",
+  "description": "Model Context Protocol server for Postcept, Proof-of-Completion for AI agents. Lets an agent verify its own high-risk actions (refunds, cancellations, ticket resolutions) against the system of record and receive a signed completion receipt.",
+  "license": "MIT",
+  "author": "Postcept",
+  "keywords": [
+    "postcept",
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "proof-of-completion",
+    "verification",
+    "stripe",
+    "zendesk",
+    "receipt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Postcept/mcp.git"
+  },
+  "homepage": "https://github.com/Postcept/mcp#readme",
+  "bugs": "https://github.com/Postcept/mcp/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "postcept-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.3"
+  }
+}
