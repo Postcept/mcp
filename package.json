@@ -1,6 +1,6 @@
 {
   "name": "@postcept/mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Model Context Protocol server for Postcept, Proof-of-Completion for AI agents. Lets an agent verify its own high-risk actions (refunds, cancellations, ticket resolutions) against the system of record and receive a signed completion receipt.",
   "license": "MIT",
   "author": "Postcept",
