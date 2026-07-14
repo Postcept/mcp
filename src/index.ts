@@ -90,8 +90,10 @@ const server = new McpServer(
       "high-risk action (a refund, a subscription cancellation, or a support-ticket " +
       "resolution), call the matching verify_* tool to confirm the action actually completed " +
       "in the system of record (Stripe, Zendesk, etc.) and obtain a signed completion receipt. " +
-      "If the result is not 'verified', do not tell the user the work is done: surface the " +
-      "mismatch and recover (e.g. retry, reopen the ticket, escalate to a human). Use " +
+      "Only tell the user the work is done when safe_to_claim_complete is true. When it is " +
+      "false, claim_reason says why: 'pending_finality' means the provider is still settling " +
+      "(say 'processing', then re-check later). Anything else means surface the mismatch and " +
+      "recover (e.g. retry, reopen the ticket, escalate to a human). Use " +
       "reconcile_verification to re-check a past verification, and verified_completion_rate " +
       "to read the agent's overall reliability.",
   }

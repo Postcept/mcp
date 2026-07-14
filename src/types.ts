@@ -78,6 +78,18 @@ export interface Verification {
   action: string;
   connector: string;
   result: string;
+  // Lifecycle/finality of the observed action, separate from `result` (a pending
+  // refund and a missing refund are both `incomplete` outcomes).
+  lifecycle?: string;
+  // The one boolean an agent may act on. Only true when the outcome is verified
+  // AND the provider state is terminal. `claim_reason` says why it is false.
+  safe_to_claim_complete?: boolean;
+  claim_reason?: string;
+  reversal_possible?: boolean;
+  correlation_method?: string;
+  correlation_strength?: string;
+  // Recommended recovery action when not safe to claim complete ("none" when done).
+  recommended_recovery?: string;
   postconditions: PostconditionResult[];
   receipt: Receipt;
   created_at: string;
