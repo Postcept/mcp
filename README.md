@@ -53,6 +53,20 @@ exercise the full flow without a live system of record.
 A non-`verified` result (`incomplete`, `duplicated`, `mismatched`,
 `policy_failed`) means the work is **not** done. Surface the gap and recover.
 
+## Advisory, by design
+
+MCP puts the verification call in the agent's hands, which makes it the right
+integration for development, demos, and workflows where the agent's judgment is
+already trusted. It is advisory: an agent can skip the call, pass the wrong
+identifiers, or ignore the answer.
+
+For consequential actions, enforce the decision outside the agent. The workflow
+or orchestrator calls the Postcept API (or the SDK's `guard()`) itself and
+branches on `safe_to_claim_complete` before anything customer-facing happens.
+The agent then receives the allowed outcome instead of deciding it. Both
+patterns use the same API and the same receipts, what changes is who owns the
+branch.
+
 ## Development
 
 ```bash
