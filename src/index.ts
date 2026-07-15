@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Postcept MCP server. Exposes Proof-of-Completion to AI agents as MCP tools.
+// Postcept MCP server. Exposes outcome verification to AI agents as MCP tools.
 // After an agent performs a high-risk action (a refund, a cancellation, a ticket
 // resolution), it calls the matching verify_* tool to prove the action actually
 // completed in the system of record and obtain a signed completion receipt.
@@ -86,7 +86,7 @@ const server = new McpServer(
   { name: "postcept", version: VERSION },
   {
     instructions:
-      "Postcept provides Proof-of-Completion for AI agents. After your agent performs a " +
+      "Postcept provides outcome verification for AI agents. After your agent performs a " +
       "high-risk action (a refund, a subscription cancellation, or a support-ticket " +
       "resolution), call the matching verify_* tool to confirm the action actually completed " +
       "in the system of record (Stripe, Zendesk, etc.) and obtain a signed completion receipt. " +

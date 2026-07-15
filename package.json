@@ -1,7 +1,7 @@
 {
   "name": "@postcept/mcp",
   "version": "0.3.0",
-  "description": "Model Context Protocol server for Postcept, Proof-of-Completion for AI agents. Lets an agent verify its own high-risk actions (refunds, cancellations, ticket resolutions) against the system of record and receive a signed completion receipt.",
+  "description": "Model Context Protocol server for Postcept, outcome verification for AI agents. Lets an agent verify its own high-risk actions (refunds, cancellations, ticket resolutions) against the system of record and receive a signed completion receipt.",
   "license": "MIT",
   "author": "Postcept",
   "keywords": [
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Postcept/mcp.git"
   },
-  "homepage": "https://github.com/Postcept/mcp#readme",
+  "homepage": "https://postcept.com",
   "bugs": "https://github.com/Postcept/mcp/issues",
   "publishConfig": {
     "access": "public"

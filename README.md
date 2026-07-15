@@ -1,7 +1,7 @@
 # @postcept/mcp
 
 A [Model Context Protocol](https://modelcontextprotocol.io) server that exposes
-**Postcept: Proof-of-Completion for AI agents** as MCP tools.
+**Postcept, outcome verification for AI agents,** as MCP tools.
 
 After an agent performs a high-risk action (a refund, a subscription
 cancellation, a support-ticket resolution), it calls a `verify_*` tool to confirm
