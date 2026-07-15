@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.postcept/mcp",
+  "description": "Verify AI-agent actions (refunds, cancellations, ticket resolutions) against the system of record and get a signed completion receipt with one enforceable decision.",
+  "repository": {
+    "url": "https://github.com/Postcept/mcp",
+    "source": "github"
+  },
+  "version": "0.3.2",
+  "packages": [
+    {
+      "registry_type": "npm",
+      "identifier": "@postcept/mcp",
+      "version": "0.3.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environment_variables": [
+        {
+          "name": "POSTCEPT_API_KEY",
+          "description": "Postcept API key",
+          "is_required": true,
+          "is_secret": true
+        }
+      ]
+    }
+  ]
+}
